@@ -1,0 +1,5 @@
+<div ng-controller="autor-controller">
+    <div ng-repeat="autores in autoresController">
+        {{autores.id + " " + autores.nome}}<a href="/detalheAutor/{{autores.id}}">Detalhe</a>
+    </div>
+</div>

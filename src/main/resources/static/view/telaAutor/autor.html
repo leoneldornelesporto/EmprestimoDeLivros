@@ -1,0 +1,13 @@
+<div ng-controller="autor-controller">
+    <input type="text" ng-model="autor.nome"/>
+    <input type="button" value="salvar" ng-click="salvarAutor()"/>
+    <input type="button" value="cancelar" ng-click="cancelar()"/>
+
+
+
+    <div ng-repeat="autores in autoresController">
+        {{autores.id}} | {{autores.nome}}
+        <input type="button" value="excluir" ng-click="excluirAutor(autores)">
+        <input type="button" value="editar"  ng-click="editarAutor(autores)" />
+    </div>
+</div>

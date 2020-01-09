@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<base href="/"/>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<script src="http://localhost:8080/app.js"></script>
+<script src="http://localhost:8080/controller/main-controller.js"></script>
+<script src="http://localhost:8080/controller/autor-controller.js"></script>
+<script src="http://localhost:8080/controller/autor-detalhe-controller.js"></script>
+
+
+<body ng-controller="mainController">
+
+<p><a href="/">Principal</a></p>
+
+<a href="/listaAutor">Autores</a>
+<a href="/editora">Editora</a>
+<a href="/usuario">usuario</a>
+
+Path: {{$location.path()}}
+Template: {{$route.current.templateUrl}}
+Parametros: {{$routeParams.detalheAutorId}}
+
+<div ng-view></div>
+
+</body>
+</html>
