@@ -14,8 +14,16 @@ app.config(function($routeProvider, $locationProvider) {
             templateUrl : "view/telaAutor/detalheAutor.html",
             controller:"autor-detalhe-controller"
         })
-        .when("/editora", {
-            templateUrl : "view/telaEditora/editora.html"
+        .when("/editora/salvar", {
+            templateUrl : "view/telaEditora/saveEditora.html",
+            controller:"editora-controller"
+        })
+        .when("/editora/listaEditoras", {
+            templateUrl : "view/telaEditora/listaEditoras.html",
+            controller:"editora-controller"
+        })
+        .when("/editora/detalheEditora/:detalheEditoraId",{
+            templateUrl : "view/telaEditora/detalheEditora.html"
         })
         .when("/usuario", {
             templateUrl : "view/telaUsuario/usuario.html"

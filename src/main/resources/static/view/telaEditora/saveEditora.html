@@ -1,0 +1,13 @@
+<div ng-controller="editora-controller">
+
+    <input type="text" placeholder="Digite seu Nome" ng-model="editora.nome"/><button type="button" ng-click="saveEditora()">Salvar</button>
+    <input type="button" value="cancelar" ng-click="cancelar()"/>
+    {{editora.nome}}
+
+    <div ng-repeat="editoras in listEditora">
+        Id:   {{editoras.id}}</br>
+        Nome: {{editoras.nome}}
+        <input type="button" value="editar"  ng-click="editarEditora(editoras)" />
+        <input type="button" value="excluir" ng-click="excluirEditora(editoras)"/>
+    </div>
+</div>

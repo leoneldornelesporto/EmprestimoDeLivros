@@ -1,0 +1,6 @@
+<div ng-controller="editora-controller">
+    <div ng-repeat="editoras in listEditora">
+        {{editoras.id + " " + editoras.nome}}
+        <a href="editora/detalheEditora/{{editoras.id}}"></a>
+    </div>
+</div>
